@@ -21,8 +21,11 @@
         <td><%= product.image %></td>
         <td><%= product.summery %></td>
         <td><%= link_to 'Show', product %></td>
-        <td><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+        <% if current_user.admin_flag? %>
+          <td><%= link_to 'Edit', edit_product_path(product) %></td>
+          <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +33,6 @@
 
 <br>
 
-<%= link_to 'New Product', new_product_path %>
+<% if current_user.admin_flag? %>
+  <%= link_to 'New Product', new_product_path %>
+<% end %>
