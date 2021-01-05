@@ -6,6 +6,7 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
+    @ranking = Product.all.order(price: :desc).limit(3)
   end
 
   # GET /products/1
