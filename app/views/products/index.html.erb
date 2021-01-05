@@ -18,7 +18,13 @@
       <tr>
         <td><%= product.name %></td>
         <td><%= product.price %></td>
-        <td><%= product.image %></td>
+        <td>
+          <% if product.image? %>
+            <%= image_tag product.image.url %>
+          <% else %>
+            <%= image_tag "/noimage.png" %>
+          <% end %>
+        </td>
         <td><%= product.summery %></td>
         <td><%= link_to 'Show', product %></td>
 
