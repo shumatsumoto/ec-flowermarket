@@ -1,5 +1,10 @@
 <p id="notice"><%= notice %></p>
 
+<%= search_form_for @q do |f| %>
+  <%= f.label :name_or_price_or_summery_cont %>
+  <%= f.search_field :name_or_price_or_summery_cont %>
+<% end %>
+
 <h1>Products</h1>
 
 <table>
