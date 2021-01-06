@@ -18,21 +18,14 @@
     </tr>
   </thead>
   <tbody>
-    <% @ranking.each do |rank| %>
+    <% @ranking.each do |product| %>
       <tr>
-        <td><%= rank.name %></td>
-        <td><%= rank.price %></td>
-        <td>
-          <% if rank.image? %>
-            <%= image_tag rank.image.url %>
-          <% else %>
-            <%= image_tag "/noimage.png" %>
-          <% end %>
-        </td>
-        <td><%= rank.summery %></td>
-        <td><%= link_to 'Show', rank %></td>
+        <td><%= product.product_id %></td>
+        <td><%= product.total_price %></td>
+        
       </tr>
     <% end %>
+  </tbody>
 </table>
 
 <h1>Products</h1>
