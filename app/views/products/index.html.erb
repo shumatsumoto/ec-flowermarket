@@ -15,12 +15,12 @@
     </tr>
   </thead>
   <tbody>
-    <% @ranking.each do |product| %>
+    <% @ranking.first(3).each { |key, value| %>
       <tr>
-        <td><%= product[0] %></td>
-        <td><%= product[1] %></td>
+        <td><%= key %></td>
+        <td><%= value %></td>
       </tr>
-    <% end %>
+    <% } %>
   </tbody>
 </table>
 
