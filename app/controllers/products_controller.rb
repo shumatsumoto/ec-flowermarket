@@ -2,11 +2,11 @@ class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
   before_action :require_admin, only: [:new, :edit, :create, :update, :destroy]
   before_action :search_product, only: [:index]
+  before_action :ranking_product, only: [:index]
 
   # GET /products
   # GET /products.json
   def index
-    @ranking = Order.all.order(total_price: :desc).limit(3)
   end
 
   # GET /products/1
@@ -83,5 +83,10 @@ class ProductsController < ApplicationController
     def search_product
       @q = Product.ransack(params[:q])
       @products = @q.result(distinct: true)
+    end
+
+    def ranking_product
+      # @ranking = Order.all.order(total_price: :desc).limit(3)
+      @ranking = Order.group(:product_id).sum(:total_price)
     end
 end
