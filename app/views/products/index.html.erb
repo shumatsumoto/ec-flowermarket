@@ -21,8 +21,8 @@
   <tbody>
     <% @ranking.first(3).each { |key, value| %>
       <tr>
-        <td><%= key %></td>
-        <td><%= value %>円</td>
+        <td><%= key %></td><!-- 商品ID -->
+        <td><%= value %>円</td><!-- 合計売上額 -->
       </tr>
     <% } %>
   </tbody>
