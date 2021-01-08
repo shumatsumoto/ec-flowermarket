@@ -3,6 +3,10 @@
 <%= search_form_for @q do |f| %>
   <%= f.label :name_or_summery_cont %>
   <%= f.search_field :name_or_summery_cont %>
+  <%= f.label :price %>
+  <%= f.number_field :price_gteq %>円以上〜
+  <%= f.number_field :price_lteq %>円以下
+  <%= f.submit %>
 <% end %>
 
 <h2>ランキング</h2>
