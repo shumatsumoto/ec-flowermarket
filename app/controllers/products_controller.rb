@@ -87,7 +87,7 @@ class ProductsController < ApplicationController
     end
 
     def ranking_product
-      product_group = Order.group(:product_id).sum(:total_price)
-      @ranking = Hash[ product_group.sort_by{ |_, v| -v } ]
+      @product_group = Order.group(:product_id).sum(:total_price)
+      @ranking = Hash[ @product_group.sort_by{ |_, v| -v } ]
     end
 end

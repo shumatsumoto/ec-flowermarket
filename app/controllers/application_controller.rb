@@ -5,9 +5,9 @@ class ApplicationController < ActionController::Base
     products_path
   end
 
-	protected
+    protected
 
-	def configure_permitted_parameters
-		devise_parameter_sanitizer.permit(:sign_up, keys: [:admin_flag])
-	end
+    def configure_permitted_parameters
+      devise_parameter_sanitizer.permit(:sign_up, keys: [:admin_flag])
+    end
 end
