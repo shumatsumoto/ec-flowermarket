@@ -12,7 +12,11 @@
 
 <p>
   <strong>Image:</strong>
-  <%= @product.image %>
+  <% if @product.image? %>
+    <%= image_tag @product.image.url %>
+  <% else %>
+    <%= image_tag "/noimage.png" %>
+  <% end %>
 </p>
 
 <p>

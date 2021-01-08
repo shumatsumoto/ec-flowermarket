@@ -1,11 +1,13 @@
 class ProductsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_product, only: [:show, :edit, :update, :destroy]
   before_action :require_admin, only: [:new, :edit, :create, :update, :destroy]
+  before_action :search_product, only: [:index]
+  before_action :ranking_product, only: [:index]
 
   # GET /products
   # GET /products.json
   def index
-    @products = Product.all
   end
 
   # GET /products/1
@@ -77,5 +79,15 @@ class ProductsController < ApplicationController
       if !current_user.admin_flag?
         redirect_to products_path
       end
+    end
+
+    def search_product
+      @q = Product.ransack(params[:q])
+      @products = @q.result(distinct: true)
+    end
+
+    def ranking_product
+      @product_group = Order.group(:product_id).sum(:total_price)
+      @ranking = Hash[ @product_group.sort_by{ |_, v| -v } ]
     end
 end
