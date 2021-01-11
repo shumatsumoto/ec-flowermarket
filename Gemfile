@@ -27,6 +27,8 @@ gem 'devise'
 gem 'carrierwave'
 gem 'ransack'
 gem 'pry-rails'
+gem 'payjp'
+gem 'haml-rails'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
