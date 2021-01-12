@@ -24,6 +24,12 @@
   <%= @product.summery %>
 </p>
 
+
+<%= form_tag(purchase_product_path, method: :post) do %>
+  <%= submit_tag "購入する" %>
+<% end %>
+
+
 <% if current_user.admin_flag? %>
   <%= link_to 'Edit', edit_product_path(@product) %> |
 <% end %>

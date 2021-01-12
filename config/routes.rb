@@ -6,6 +6,12 @@ Rails.application.routes.draw do
   get 'pages/index'
   get 'pages/show'
   root to: 'products#index'
+  
+  resources :products do
+    member do
+      post 'purchase'
+    end
+  end
 
   resources :card, only: [:new, :show] do
     collection do

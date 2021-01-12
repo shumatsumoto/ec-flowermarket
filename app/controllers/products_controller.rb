@@ -64,6 +64,19 @@ class ProductsController < ApplicationController
     end
   end
 
+  def purchase
+    @card = Card.where(user_id: current_user.id).first
+    @product = Product.find(params[:id])
+    #Payjp 秘密鍵取得
+    Payjp.api_key = 'sk_test_245b715118ddb546982b02d4'
+    charge = Payjp::Charge.create(
+      amount: @product.price,
+      customer: Payjp::Customer.retrieve(@card.customer_id),
+      currency: 'jpy'
+    )
+    redirect_to root_path, notice: '購入しました'
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_product
