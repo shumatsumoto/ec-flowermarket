@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get 'card/new'
   get 'card/show'
   resources :products
+  resources :orders
   devise_for :users
   get 'pages/index'
   get 'pages/show'
