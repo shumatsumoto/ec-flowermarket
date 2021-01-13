@@ -31,6 +31,12 @@
   </p>
 <% end %>
 
+<p>
+  <strong>合計金額:</strong>
+  <%= @total_price %>円
+</p>
+
+
 <%= form_tag(purchase_product_path, method: :post) do %>
   <%= submit_tag "購入する" %>
 <% end %>
