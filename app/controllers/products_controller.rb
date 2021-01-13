@@ -13,6 +13,8 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
+    @product = Product.find(params[:id])
+    @order = Order.find_by(product_id: @product.id)
   end
 
   # GET /products/new

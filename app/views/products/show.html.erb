@@ -26,6 +26,10 @@
 
 
 <%= form_tag(purchase_product_path, method: :post) do %>
+  <p>
+    <strong>注文数:</strong>
+    <%= @order.count %>個
+  </p>
   <%= submit_tag "購入する" %>
 <% end %>
 
