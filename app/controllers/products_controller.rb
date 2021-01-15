@@ -71,7 +71,10 @@ class ProductsController < ApplicationController
     @card = Card.where(user_id: current_user.id).first
     @product = Product.find(params[:id])
     @order = Order.find_by(product_id: @product.id)
-    @total_price = @product.price * @order.count
+    @order.count = params[:count]
+    @order.total_price = @product.price * @order.count
+    @order.save
+    binding.pry
     #Payjp 秘密鍵取得
     Payjp.api_key = 'sk_test_245b715118ddb546982b02d4'
     charge = Payjp::Charge.create(

@@ -24,23 +24,10 @@
   <%= @product.summery %>
 </p>
 
-<%= form_with model: @order do |f| %>
-  <p>
-    <strong>注文数:</strong>
-    <%= f.select :count, [[1, 1], [2, 2], [3, 3], [4, 4], [5, 5], [6, 6], [7, 7], [8, 8], [9, 9]] %>個
-  </p>
-<% end %>
-
-<p>
-  <strong>合計金額:</strong>
-  <%= @total_price %>円
-</p>
-
-
 <%= form_tag(purchase_product_path, method: :post) do %>
+  <%= number_field_tag 'count', '1', min: 1, max: 9 %>
   <%= submit_tag "購入する" %>
 <% end %>
-
 
 <% if current_user.admin_flag? %>
   <%= link_to 'Edit', edit_product_path(@product) %> |
