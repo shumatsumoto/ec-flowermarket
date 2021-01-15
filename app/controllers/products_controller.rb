@@ -74,7 +74,6 @@ class ProductsController < ApplicationController
     @order.count = params[:count]
     @order.total_price = @product.price * @order.count
     @order.save
-    binding.pry
     #Payjp 秘密鍵取得
     Payjp.api_key = 'sk_test_245b715118ddb546982b02d4'
     charge = Payjp::Charge.create(
