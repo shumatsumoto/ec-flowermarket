@@ -15,7 +15,6 @@ class ProductsController < ApplicationController
   def show
     @product = Product.find(params[:id])
     @order = Order.find_by(product_id: @product.id)
-    @total_price = @product.price * @order.count
   end
 
   # GET /products/new
@@ -73,15 +72,19 @@ class ProductsController < ApplicationController
     @order = Order.find_by(product_id: @product.id)
     @order.count = params[:count]
     @order.total_price = @product.price * @order.count
-    @order.save
-    #Payjp 秘密鍵取得
-    Payjp.api_key = 'sk_test_245b715118ddb546982b02d4'
-    charge = Payjp::Charge.create(
-      amount: @total_price,
-      customer: Payjp::Customer.retrieve(@card.customer_id),
-      currency: 'jpy'
-    )
-    redirect_to root_path, notice: '購入しました'
+    if @order.save!
+      #Payjp 秘密鍵取得
+      Payjp.api_key = 'sk_test_245b715118ddb546982b02d4'
+      charge = Payjp::Charge.create(
+        amount: @order.total_price,
+        customer: Payjp::Customer.retrieve(@card.customer_id),
+        currency: 'jpy'
+      )
+      redirect_to root_path, notice: '購入しました'
+    else
+      flash[:alert] = '購入に失敗しました'
+      redirect_back(fallback_location: root_path)
+    end
   end
 
   private
