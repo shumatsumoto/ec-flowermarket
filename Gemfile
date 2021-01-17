@@ -24,6 +24,8 @@ gem 'jbuilder', '~> 2.7'
 
 gem 'dotenv-rails'
 gem 'devise'
+gem 'devise-i18n'
+gem 'devise-i18n-views'
 gem 'carrierwave'
 gem 'ransack'
 gem 'pry-rails'
