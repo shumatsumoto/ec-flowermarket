@@ -4,7 +4,7 @@
     <title>EcFlowermarket</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <script type="text/javascript" src="https://js.pay.jp/"></script>
@@ -54,16 +54,7 @@
         </div>
       </nav>
       <!-- Navbar -->
-
-      <!-- Jumbotron -->
-      <div class="p-5 text-center bg-light">
-        <h1 class="mb-3">Heading</h1>
-        <h4 class="mb-3">Subheading</h4>
-        <a class="btn btn-primary" href="" role="button">Call to action</a>
-      </div>
-      <!-- Jumbotron -->
     </header>
-
 
     <div class="container">
       <% flash.each do |name, msg| %>
@@ -71,7 +62,6 @@
           <%= msg.html_safe %>
         </div>
       <% end %>
-
       <%= yield %>
     </div>
   </body>

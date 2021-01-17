@@ -7,30 +7,33 @@
   <%= f.submit %>
 <% end %>
 
-<h2>ランキング</h2>
+<h2>商品一覧</h2>
 
-<div class="row">
+<div class="row row-cols-1 row-cols-md-3 g-4">
   <% @products.each do |product| %>
-    <div class="card col-md-4 col-sm-12">
-      <% if product.image? %>
-        <%= image_tag product.image.url, class: "card-img-top" %>
-      <% else %>
-        <%= image_tag "/noimage.png", class: "card-img-top" %>
-      <% end %>
-      <div class="card-body">
-        <h4 class="card-title"><%= product.name %></h4>
-        <p class="card-text"><%= product.summery %></p>
-        <%= link_to '詳細を見る', product, class: "btn btn-primary" %>
-        <% if current_user.admin_flag? %>
-          <%= link_to '編集', edit_product_path(product), class: "btn btn-info" %>
-          <%= link_to '削除', product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+    <div class="col">
+      <div class="card">
+        <% if product.image? %>
+          <%= image_tag product.image.url, class: "card-img-top" %>
+        <% else %>
+          <%= image_tag "/noimage.png", class: "card-img-top" %>
         <% end %>
+        <div class="card-body">
+          <h4 class="card-title"><%= product.name %></h4>
+          <p class="card-text"><%= product.summery %></p>
+          <%= link_to '詳細を見る', product, class: "btn btn-primary" %>
+          <% if current_user.admin_flag? %>
+            <div class="mt-2">
+              <%= link_to '編集', edit_product_path(product), class: "btn btn-info" %>
+              <%= link_to '削除', product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+            </div>
+          <% end %>
+        </div>
       </div>
     </div>
   <% end %>
-
 </div>
 
 <% if current_user.admin_flag? %>
-  <%= link_to 'New Product', new_product_path, class: "btn btn-primary" %>
+  <p class="mt-4"><%= link_to 'New Product', new_product_path, class: "btn btn-primary" %></p>
 <% end %>
