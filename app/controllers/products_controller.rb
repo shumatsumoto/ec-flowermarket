@@ -13,6 +13,8 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
+    @product = Product.find(params[:id])
+    @order = Order.find_by(product_id: @product.id)
   end
 
   # GET /products/new
@@ -61,6 +63,27 @@ class ProductsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to products_url, notice: 'Product was successfully destroyed.' }
       format.json { head :no_content }
+    end
+  end
+
+  def purchase
+    @card = Card.where(user_id: current_user.id).first
+    @product = Product.find(params[:id])
+    @order = Order.find_by(product_id: @product.id)
+    @order.count = params[:count]
+    @order.total_price = @product.price * @order.count
+    if @order.save!
+      #Payjp 秘密鍵取得
+      Payjp.api_key = 'sk_test_245b715118ddb546982b02d4'
+      charge = Payjp::Charge.create(
+        amount: @order.total_price,
+        customer: Payjp::Customer.retrieve(@card.customer_id),
+        currency: 'jpy'
+      )
+      redirect_to root_path, notice: '購入しました'
+    else
+      flash[:alert] = '購入に失敗しました'
+      redirect_back(fallback_location: root_path)
     end
   end
 
