@@ -15,6 +15,10 @@ class ProductsController < ApplicationController
   def show
     @product = Product.find(params[:id])
     @order = Order.find_by(product_id: @product.id)
+    @card = Card.where(user_id: current_user.id).first
+    unless @card.present?
+      redirect_to card_index_path
+    end
   end
 
   # GET /products/new
@@ -69,7 +73,9 @@ class ProductsController < ApplicationController
   def purchase
     @card = Card.where(user_id: current_user.id).first
     @product = Product.find(params[:id])
-    @order = Order.find_by(product_id: @product.id)
+    @order = Order.new
+    @order.user_id = current_user.id
+    @order.product_id = @product.id
     @order.count = params[:count]
     @order.total_price = @product.price * @order.count
     if @order.save!
