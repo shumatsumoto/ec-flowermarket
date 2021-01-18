@@ -11,24 +11,24 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :price %>
-    <%= form.number_field :price %>
+    <%= form.number_field :price, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :image %>
-    <%= form.file_field :image %>
+    <%= form.file_field :image, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :summery %>
-    <%= form.text_area :summery %>
+    <%= form.text_area :summery, class: "form-control" %>
   </div>
 
   <div class="actions">
