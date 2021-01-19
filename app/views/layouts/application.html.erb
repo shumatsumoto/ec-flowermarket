@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>EcFlowermarket</title>
+    <title>花の通販サイト</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,53 +12,41 @@
 
   <body>
     <header>
-      <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-        <div class="container-fluid">
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-mdb-toggle="collapse"
-            data-mdb-target="#navbarExample01"
-            aria-controls="navbarExample01"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <i class="fas fa-bars"></i>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarExample01">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item active">
-                <%= link_to '商品一覧', products_path, class: "nav-link text-white" %>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Logo</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarColor01">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <%= link_to '商品一覧', products_path, class: "nav-link" %>
+            </li>
+            <% if user_signed_in? %>
+              <li class="nav-item">
+                <%= link_to current_user.username, pages_show_path, class: "nav-link" %>
               </li>
-              <% if user_signed_in? %>
-                <li class="nav-item">
-                  <%= link_to current_user.username, pages_show_path, class: "nav-link text-white" %>
-                </li>
-                <li class="nav-item">
-                  <%= link_to 'プロフィール変更', edit_user_registration_path, class: "nav-link text-white" %>
-                </li>
-                <li class="nav-item">
-                  <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "nav-link text-white" %>
-                </li>
-              <% else %>
-                <li class="nav-item">
-                  <%= link_to 'サインアップ', new_user_registration_path, class: "nav-link text-white" %>
-                </li>
-                <li class="nav-item">
-                  <%= link_to 'ログイン', new_user_session_path, class: "nav-link text-white" %>
-                </li>
-              <% end %>
-            </ul>
-          </div>
+              <li class="nav-item">
+                <%= link_to 'プロフィール変更', edit_user_registration_path, class: "nav-link" %>
+              </li>
+              <li class="nav-item">
+                <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "nav-link" %>
+              </li>
+            <% else %>
+              <li class="nav-item">
+                <%= link_to 'サインアップ', new_user_registration_path, class: "nav-link" %>
+              </li>
+              <li class="nav-item">
+                <%= link_to 'ログイン', new_user_session_path, class: "nav-link" %>
+              </li>
+            <% end %>
+          </ul>
         </div>
       </nav>
-      <!-- Navbar -->
     </header>
 
-
-
-    <div class="container">
+    <div class="container pt-4">
       <% flash.each do |name, msg| %>
         <div class="alert alert-success">
           <%= msg.html_safe %>

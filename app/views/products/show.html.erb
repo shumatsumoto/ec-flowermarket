@@ -12,7 +12,7 @@
         <p class="card-text"><%= @product.summery %></p>
 <%= form_tag(purchase_product_path, method: :post) do %>
   <%= number_field_tag 'count', '1', min: 1, max: 9 %>
-  <%= submit_tag "購入する" %>
+  <%= submit_tag "購入する", class: "btn btn-primary" %>
 <% end %>
       </div>
     </div>

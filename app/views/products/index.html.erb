@@ -1,14 +1,13 @@
 <%= search_form_for @q do |f| %>
-<div class="form-inline">
-  <%= f.label :name_or_summery_cont %>
-  <%= f.search_field :name_or_summery_cont, class: "form-control mr-sm-2" %>
-</div>
-<div class="form-inline">
-  <%= f.label :price %>
-  <%= f.number_field :price_gteq, class: "form-control mr-sm-2" %>円以上〜
-  <%= f.number_field :price_lteq, class: "form-control mr-sm-2" %>円以下
-</div>
-  <%= f.submit %>
+  <div class="form-inline">
+    <%= f.search_field :name_or_summery_cont, class: "form-control mr-sm-2" %>
+    <%= f.submit '検索', class: 'btn btn-outline-info my-2 my-sm-0' %>
+  </div>
+  <div class="form-inline mt-2">
+    <%= f.label :price %>
+    <%= f.number_field :price_gteq, class: "form-control mr-sm-2 ml-sm-2" %>〜
+    <%= f.number_field :price_lteq, class: "form-control mr-sm-2 ml-sm-2" %>円
+  </div>
 <% end %>
 
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -38,7 +37,7 @@
 
 <div class="row row-cols-1 row-cols-md-3 g-4">
   <% @products.each do |product| %>
-    <div class="col">
+    <div class="col mb-3">
       <div class="card">
         <% if product.image? %>
           <%= image_tag product.image.url, class: "card-img-top" %>
