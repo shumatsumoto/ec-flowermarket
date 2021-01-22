@@ -13,7 +13,7 @@
   <body>
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Logo</a>
+        <%= link_to '※', products_path, class: "navbar-brand" %>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -42,6 +42,15 @@
               </li>
             <% end %>
           </ul>
+
+          <% if current_page?(products_path) %>
+            <%= search_form_for @q do |f| %>
+              <div class="form-inline">
+                <%= f.search_field :name_or_summery_cont, class: "form-control mr-sm-2" %>
+                <%= f.submit '検索', class: 'btn btn-outline-info my-2 my-sm-0' %>
+              </div>
+            <% end %>
+          <% end %>
         </div>
       </nav>
     </header>
