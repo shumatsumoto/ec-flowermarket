@@ -24,8 +24,14 @@
               <%= link_to '商品一覧', products_path, class: "nav-link" %>
             </li>
             <% if user_signed_in? %>
-              <li class="nav-item">
-                <%= link_to current_user.username, pages_show_path, class: "nav-link" %>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <%= current_user.username %>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <%= link_to 'マイページ', pages_show_path, class: "dropdown-item" %>
+                  <%= link_to 'お支払い方法', card_index_path, class: "dropdown-item" %>
+                </div>
               </li>
               <li class="nav-item">
                 <%= link_to 'プロフィール変更', edit_user_registration_path, class: "nav-link" %>
