@@ -22,12 +22,12 @@ https://ec-flowermarket-shu0328.herokuapp.com/
 
 ## :pencil2: Overview
 
-
+I created an EC site. Pay.jp has a credit card payment function.
 
 ## :hammer: Requirement
 
 - macOS
-- Rails 6.0.3.5
+- Rails 6.0.3.4
 - [Material Design for Bootstrap4](https://mdbootstrap.com/)
 
 ## :pushpin: Usage
@@ -54,16 +54,13 @@ http://localhost:3000
 ## :railway_car: Features
 
 - Article posting
-- Likes
-- Rich text
+- Credit card payment
 - Login / Logout
 - SignUp
 
 ## :green_book: Reference
 
-- [rails6 deviseを使用する](https://mebee.info/2021/03/30/post-27697/)
-- [Railsでいいね機能を実装しよう](https://qiita.com/nojinoji/items/2c66499848d882c31ffa)
-- [[Ruby on Rails 6] Action Textでリッチテキスト機能を導入してみよう!](https://www.web-knowledge-info.com/wp/ruby-on-rails32/)
+- [Payjpでクレジットカード登録と削除機能を実装する(Rails)](https://qiita.com/takachan_coding/items/f7e70794b9ca03b559dd)
 
 ## :hatching_chick: Author
 
