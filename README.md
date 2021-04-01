@@ -18,7 +18,7 @@
 
 ## :computer: URL
 
-https://......
+https://ec-flowermarket-shu0328.herokuapp.com/
 
 ## :pencil2: Overview
 
