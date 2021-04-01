@@ -62,7 +62,7 @@ http://localhost:3000
 - SignUp
 - Credit card payment
 
-<img width="438" alt="er" src="https://user-images.githubusercontent.com/11171872/113263868-49fb5c80-930d-11eb-8dd5-951452538c1d.png">
+<img width="438" alt="ER図" src="https://user-images.githubusercontent.com/11171872/113263868-49fb5c80-930d-11eb-8dd5-951452538c1d.png">
 
 ## :green_book: Reference
 
