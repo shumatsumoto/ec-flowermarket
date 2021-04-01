@@ -13,7 +13,10 @@
   </a>&nbsp;
   <a href="https://www.heroku.com/">
     <img src="https://user-images.githubusercontent.com/11171872/113230337-c7a27680-92d3-11eb-9e94-c131dfba8f1d.png" height="90">
-  </a>
+  </a>&nbsp;
+  <a href="https://pay.jp/">
+    <img src="https://user-images.githubusercontent.com/11171872/113249877-778ada80-92fa-11eb-9ddf-6fe1f140153b.png" height="90">
+  </a>&nbsp;
 </div>
 
 ## :computer: URL
