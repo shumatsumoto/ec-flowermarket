@@ -1,5 +1,6 @@
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/11171872/113256120-b2454080-9303-11eb-9b0d-b53cb5057531.gif" width="600">
+  <img src="https://user-images.githubusercontent.com/11171872/113391816-1123bc00-93cf-11eb-8fe0-b479c5e5a2cd.gif" width="600">
+  <img src="https://user-images.githubusercontent.com/11171872/113392051-78da0700-93cf-11eb-9762-cce6d6f2bb75.gif" width="600">
 </div>
 
 <h1 align="center">EC FlowerMarket</h1>
