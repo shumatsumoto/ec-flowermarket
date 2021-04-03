@@ -32,7 +32,8 @@ I created an EC site. Pay.jp has a credit card payment function.
 
 - macOS
 - Rails 6.0.3.4
-- [Material Design for Bootstrap4](https://mdbootstrap.com/)
+- Material Design for Bootstrap4
+- Heroku
 
 ## :pushpin: Usage
 
