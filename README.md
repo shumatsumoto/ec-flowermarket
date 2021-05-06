@@ -10,7 +10,7 @@
     <img src="https://user-images.githubusercontent.com/11171872/113230027-27e4e880-92d3-11eb-8a73-13b4d438c17c.jpg" height="90">
   </a>&nbsp;
   <a href="https://mdbootstrap.com/">
-    <img src="https://user-images.githubusercontent.com/11171872/113248502-119d5380-92f8-11eb-9b85-66678d9b5d46.png" height="90">
+    <img src="https://user-images.githubusercontent.com/11171872/117298781-b7714e80-aeb2-11eb-9c93-52a24f28328f.png" height="90">
   </a>&nbsp;
   <a href="https://pay.jp/">
     <img src="https://user-images.githubusercontent.com/11171872/113249877-778ada80-92fa-11eb-9ddf-6fe1f140153b.png" height="90">
