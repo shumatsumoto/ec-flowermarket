@@ -7,16 +7,16 @@
 
 <div align="center">
   <a href="https://railsguides.jp/6_0_release_notes.html">
-    <img src="https://user-images.githubusercontent.com/11171872/113230027-27e4e880-92d3-11eb-8a73-13b4d438c17c.jpg" height="90">
+    <img src="https://user-images.githubusercontent.com/11171872/113230027-27e4e880-92d3-11eb-8a73-13b4d438c17c.jpg" height="55">
   </a>&nbsp;
   <a href="https://mdbootstrap.com/">
-    <img src="https://user-images.githubusercontent.com/11171872/117298781-b7714e80-aeb2-11eb-9c93-52a24f28328f.png" height="90">
+    <img src="https://user-images.githubusercontent.com/11171872/117298781-b7714e80-aeb2-11eb-9c93-52a24f28328f.png" height="55">
   </a>&nbsp;
   <a href="https://pay.jp/">
-    <img src="https://user-images.githubusercontent.com/11171872/113249877-778ada80-92fa-11eb-9ddf-6fe1f140153b.png" height="90">
+    <img src="https://user-images.githubusercontent.com/11171872/113249877-778ada80-92fa-11eb-9ddf-6fe1f140153b.png" height="55">
   </a>&nbsp;
   <a href="https://www.heroku.com/">
-    <img src="https://user-images.githubusercontent.com/11171872/113230337-c7a27680-92d3-11eb-9e94-c131dfba8f1d.png" height="90">
+    <img src="https://user-images.githubusercontent.com/11171872/113230337-c7a27680-92d3-11eb-9e94-c131dfba8f1d.png" height="55">
   </a>
 </div>
 
