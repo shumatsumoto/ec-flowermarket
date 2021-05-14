@@ -10,7 +10,7 @@
     <img src="https://user-images.githubusercontent.com/11171872/113230027-27e4e880-92d3-11eb-8a73-13b4d438c17c.jpg" height="55">
   </a>&nbsp;
   <a href="https://mdbootstrap.com/">
-    <img src="https://user-images.githubusercontent.com/11171872/117298781-b7714e80-aeb2-11eb-9c93-52a24f28328f.png" height="55">
+    <img src="https://user-images.githubusercontent.com/11171872/118204129-825b9200-b498-11eb-9fec-e3d72a2273b1.png" height="55">
   </a>&nbsp;
   <a href="https://pay.jp/">
     <img src="https://user-images.githubusercontent.com/11171872/113249877-778ada80-92fa-11eb-9ddf-6fe1f140153b.png" height="55">
@@ -32,7 +32,7 @@ I created an EC site. Pay.jp has a credit card payment function.
 
 - macOS
 - Rails 6.0.3.4
-- Material Design for Bootstrap4
+- Bootstrap
 - Heroku
 
 ## :pushpin: Usage
