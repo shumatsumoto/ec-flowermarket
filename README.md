@@ -1,6 +1,6 @@
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/11171872/113391816-1123bc00-93cf-11eb-8fe0-b479c5e5a2cd.gif" width="600">
-  <img src="https://user-images.githubusercontent.com/11171872/113392051-78da0700-93cf-11eb-9762-cce6d6f2bb75.gif" width="600">
+  <img src="https://user-images.githubusercontent.com/11171872/113391816-1123bc00-93cf-11eb-8fe0-b479c5e5a2cd.gif" width="550">
+  <img src="https://user-images.githubusercontent.com/11171872/113392051-78da0700-93cf-11eb-9762-cce6d6f2bb75.gif" width="550">
 </div>
 
 <h1 align="center">EC FlowerMarket</h1>
@@ -64,7 +64,9 @@ http://localhost:3000
 - SignUp
 - Credit card payment
 
-<img width="438" alt="ER図" src="https://user-images.githubusercontent.com/11171872/113263868-49fb5c80-930d-11eb-8dd5-951452538c1d.png">
+<div align="center">
+  <img width="440" alt="ER図" src="https://user-images.githubusercontent.com/11171872/113263868-49fb5c80-930d-11eb-8dd5-951452538c1d.png">
+</div>
 
 ## :green_book: Reference
 
