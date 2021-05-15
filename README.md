@@ -65,7 +65,7 @@ http://localhost:3000
 - Credit card payment
 
 <div align="center">
-  <img width="440" alt="ER図" src="https://user-images.githubusercontent.com/11171872/113263868-49fb5c80-930d-11eb-8dd5-951452538c1d.png">
+  <img width="440" alt="ER図" src="https://user-images.githubusercontent.com/11171872/118356943-824fb500-b5b2-11eb-81d5-cd8cb92c5250.png">
 </div>
 
 ## :green_book: Reference
